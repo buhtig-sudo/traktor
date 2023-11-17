@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0">
+    <style>
+        body {}
+
+        /* img {
+            width: 100%;
+            background-size: cover;
+        }  */
+
+        /* [word="red"] {
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        } */
+    </style>
+
+</head>
+
+<body>
+    <!-- <img id=image src="./3.jpg"> -->
+
+    <script>
+
+
+        let vopros = document.createElement("h3");
+        vopros.setAttribute("word", "red");
+        if (vopros.getAttribute("word") == "red") {
+            vopros.style.color = "red";
+        } else {
+            vopros.style.color = "yellow";
+        }
+        vopros.classList.toggle("cl_word");
+        if (vopros.getAttribute("class") == "cl_word") {
+            vopros.style.color = "blue";
+        }
+
+        vopros.style.display = "flex";
+        vopros.style.alignItems = "center";
+        vopros.style.justifyContent = "center";
+
+        vopros.innerHTML = "Разрешено ли водителю самоходной машины продолжить движение прямо?";
+        document.body.append(vopros)
+
+        let img = document.createElement("img");
+        img.setAttribute("src", "./3.jpg");
+        img.setAttribute("id", "image");
+        img.style.backgroundSize = "cover";
+        img.style.width = "100%";
+        document.body.append(img);
+
+        let ol = document.createElement("ol");
+        let li;
+        let i;
+        let arr = ["Разрешено", "Разрешено, если он обслуживает предприятия, находящиеся в обозначенной зоне, или граждан, проживающих в обозначенной зоне.", "Запрещено"];
+        for (i = 0; i <= arr.length - 1; i++) {
+            li = document.createElement("li");
+            ol.appendChild(li);
+            li.innerHTML = arr[i];
+
+            document.body.append(ol);
+        }
+        let cli = document.querySelectorAll("li")[1];
+        cli.setAttribute("co", "green");
+
+        if (cli.getAttribute("co") == "green") {
+            cli.style.color = "green";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body id="body">
+
+  <script>
+    let table = document.createElement("table");
+    let thead = document.createElement("thead");
+    let tbody = document.createElement("tbody");
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    body.append(table);
+
+    let row_1 = document.createElement('tr');
+    let row_2 = document.createElement('tr');
+    let row_3 = document.createElement('tr');
+    let row_4 = document.createElement('tr');
+
+    let row_1_td = document.createElement('td');
+    row_1_td.innerHTML = 1
+    let row_2_td = document.createElement('td');
+    row_2_td.innerHTML = 2
+    let row_3_td = document.createElement('td');
+    row_3_td.innerHTML = 3;
+    let row_4_td = document.createElement('td');
+    row_4_td.innerHTML = 4;
+    row_1.appendChild(row_1_td);
+    row_1.appendChild(row_2_td);
+    row_1.appendChild(row_3_td);
+    row_1.appendChild(row_4_td);
+    tbody.appendChild(row_1);
+
+    let row_2_td1 = document.createElement('td');
+    row_2_td1.innerHTML = 10
+    let row_2_td2 = document.createElement('td');
+    row_2_td2.innerHTML = 20
+    let row_2_td3 = document.createElement('td');
+    row_2_td3.innerHTML = 30;
+    let row_2_td4 = document.createElement('td');
+    row_2_td4.innerHTML = 40;
+    row_2.appendChild(row_2_td1);
+    row_2.appendChild(row_2_td2);
+    row_2.appendChild(row_2_td3);
+    row_2.appendChild(row_2_td4);
+    tbody.appendChild(row_2);
+
+    let row_3_td1 = document.createElement('td');
+    row_3_td1.innerHTML = 100
+    let row_3_td2 = document.createElement('td');
+    row_3_td2.innerHTML = 200
+    let row_3_td3 = document.createElement('td');
+    row_3_td3.innerHTML = 300;
+    let row_3_td4 = document.createElement('td');
+    row_3_td4.innerHTML = 400;
+    row_3.appendChild(row_3_td1);
+    row_3.appendChild(row_3_td2);
+    row_3.appendChild(row_3_td3);
+    row_3.appendChild(row_3_td4);
+    tbody.appendChild(row_3);
+
+    for (let i = 0; i < table.rows.length; i++) {
+      let row = table.rows[i];
+      row.cells[i].style.background = 'blue';
+    }
+  </script>
+</body>
+
+</html>
