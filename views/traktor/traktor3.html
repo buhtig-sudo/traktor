@@ -4,26 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0">
-    <style>
+    <!-- <style>
         body {}
 
-        /* img {
+        img {
             width: 100%;
             background-size: cover;
         }  */
 
-        /* [word="red"] {
+        [word="red"] {
             color: red;
             display: flex;
             align-items: center;
             justify-content: center
-        } */
-    </style>
+        } 
+    </style> -->
 
 </head>
 
 <body>
-    <!-- <img id=image src="./3.jpg"> -->
 
     <script>
 
@@ -57,6 +56,7 @@
         let ol = document.createElement("ol");
         let li;
         let i;
+
         let arr = ["Разрешено", "Разрешено, если он обслуживает предприятия, находящиеся в обозначенной зоне, или граждан, проживающих в обозначенной зоне.", "Запрещено"];
         for (i = 0; i <= arr.length - 1; i++) {
             li = document.createElement("li");
@@ -71,6 +71,15 @@
         if (cli.getAttribute("co") == "green") {
             cli.style.color = "green";
         }
+
+        let ii = document.querySelectorAll("ol>li")[1]
+
+        setInterval(() => ii.hidden = !ii.hidden, 2000);
+
+        console.dir(cli)
+        console.log(cli.outerHTML)
+
+
     </script>
 </body>
 
